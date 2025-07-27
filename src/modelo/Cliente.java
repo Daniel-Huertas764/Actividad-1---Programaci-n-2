@@ -11,6 +11,13 @@ package modelo;
 public class Cliente extends Persona{
     private String nit;
 
+    public Cliente() {}
+    
+    public Cliente(String nit, String nombres, String apellidos, String direccion, String telefono, String fecha_nacimiento) {
+        super(nombres, apellidos, direccion, telefono, fecha_nacimiento);
+        this.nit = nit;
+    }
+
     public String getNit() {
         return nit;
     }
@@ -25,8 +32,9 @@ public class Cliente extends Persona{
     System.out.println("Nombres: "+ getNombres() );
     System.out.println("Apellidos: "+ getApellidos() );
     System.out.println("Direccion: "+ getDireccion() );
+    System.out.println("Telefono: "+ getTelefono() );
     System.out.println("Fecha Nacimiento: "+ getFecha_nacimiento() );
+    System.out.println("___________________");
     }
-    
     
 }
